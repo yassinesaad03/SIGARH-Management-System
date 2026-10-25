@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIGARH - Dashboard Personnel</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+    <div class="dashboard-card">
+
+        <!-- =========================
+                Logo
+        ========================== -->
+
+        <div class="logo">
+
+            <img src="images/logo.png" alt="Logo SIGARH">
+
+        </div>
+
+        <h1>SIGARH</h1>
+
+        <p>
+            Système Informatique de Gestion des Ressources Humaines
+        </p>
+
+        <!-- =========================
+                Barre supérieure
+        ========================== -->
+
+        <div class="top-bar">
+
+
+    <div class="top-actions">
+
+
+        <button id="btnAdd">
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            Ajouter un personnel
+
+        </button>
+
+
+
+        <button id="btnLogout" class="logout-btn">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            Déconnexion
+
+        </button>
+
+
+    </div>
+
+
+
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+                type="text"
+                id="searchInput"
+                placeholder="Rechercher par matricule, nom ou prénom...">
+
+    </div>
+
+
+</div>
+
+        <!-- =========================
+                Tableau
+        ========================== -->
+
+        <div class="table-container">
+
+            <table id="personnelTable">
+
+                <thead>
+
+                <tr>
+
+                    <th>Photo</th>
+
+                    <th>Matricule</th>
+
+                    <th>Nom</th>
+
+                    <th>Prénom</th>
+
+                    <th>Genre</th>
+
+                    <th>Grade</th>
+
+                    <th>Poste</th>
+
+                    <th>Téléphone</th>
+
+                    <th>Statut</th>
+
+                    <th>Actions</th>
+
+                </tr>
+
+                </thead>
+
+                <tbody id="tableBody">
+
+                <!-- Rempli par dashboard.js -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- =========================
+                Message
+        ========================== -->
+
+        <div id="message"></div>
+
+    </div>
+
+</div>
+
+<script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>

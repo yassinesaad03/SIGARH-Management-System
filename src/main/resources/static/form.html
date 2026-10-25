@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SIGARH - Ajouter Personnel</title>
+
+
+    <link rel="stylesheet" href="css/form.css">
+
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<div class="background">
+
+
+<div class="personnel-card">
+
+
+<div class="logo">
+
+    <img src="images/logo.png" alt="Logo SIGARH">
+
+</div>
+
+
+<h1>SIGARH</h1>
+
+<p id="formTitle">Ajouter un nouveau personnel</p>
+
+
+
+
+<form id="personnelForm">
+
+
+    <!-- ==========================
+            Photo du personnel
+    ========================== -->
+
+    <div class="section">
+
+        <h2>
+            <i class="fa-solid fa-image"></i>
+            Photo du personnel
+        </h2>
+
+        <div id="dropZone" class="drop-zone">
+
+            <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                    hidden>
+
+            <img
+                    id="photoPreview"
+                    src="images/default-avatar.png"
+                    alt="Photo">
+
+            <div class="drop-text">
+
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                <p>
+                    Glissez votre photo ici
+                </p>
+
+                <span>
+                ou cliquez pour sélectionner une image
+            </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+<!-- ==================================
+        INFORMATIONS PERSONNELLES
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+<i class="fa-solid fa-user"></i>
+Informations personnelles
+</h2>
+
+
+
+<div class="form-grid">
+
+
+
+<div class="field">
+
+<label>Matricule</label>
+
+<input type="number" id="matricule">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Horaire</label>
+
+<select id="horaire">
+
+<option value="">-- Choisir --</option>
+
+<option value="DOUBLE">Double Séance</option>
+
+<option value="UNIQUE">Séance Unique</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Nom</label>
+
+<input type="text" id="nom">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Prénom</label>
+
+<input type="text" id="prenom">
+
+</div>
+
+<div class="field">
+
+<label>Genre</label>
+
+<select id="genre">
+
+<option value="">-- Choisir --</option>
+
+<option value="MALE">Male</option>
+
+<option value="FEMELLE">Femelle</option>
+
+</select>
+
+</div>
+
+
+
+<div class="field" id="nomJeuneFilleField">
+
+    <label>Nom jeune fille</label>
+
+    <input type="text" id="nomJeuneFille">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Prénom père</label>
+
+<input type="text" id="prenomPere">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Prénom grand père</label>
+
+<input type="text" id="prenomGpere">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Prénom mère</label>
+
+<input type="text" id="prenomMere">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Date naissance</label>
+
+<input type="date" id="dateNaissance">
+
+</div>
+
+
+
+
+<div class="field">
+
+<label>Groupe sanguin</label>
+
+<select id="groupSanguin">
+
+<option value="">-- Choisir --</option>
+
+<option value="O_positif">O positif</option>
+
+<option value="O_negatif">O négatif</option>
+
+<option value="A_positif">A positif</option>
+
+<option value="A_negatif">A négatif</option>
+
+<option value="B_positif">B positif</option>
+
+<option value="B_negatif">B négatif</option>
+
+<option value="AB_positif">AB positif</option>
+
+<option value="AB_negatif">AB négatif</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Lieu naissance</label>
+
+<input type="text" id="lieuNaissance">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Etat civil</label>
+
+<select id="etatCivil">
+
+<option value="">-- Choisir --</option>
+
+<option value="CELIBATAIRE">Célibataire</option>
+
+<option value="MARIE">Marié</option>
+
+<option value="DIVORCE">Divorcé</option>
+
+<option value="VEUF">Veuf</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="field radio-field">
+
+    <div class="radio-line">
+
+        <label class="main-label">
+            Maître famille
+        </label>
+
+
+        <label>
+            <input 
+                type="radio" 
+                name="MaitreFamille" 
+                id="MaitreFamilleOui"
+                value="true">
+
+            Oui
+        </label>
+
+
+        <label>
+            <input 
+                type="radio" 
+                name="MaitreFamille" 
+                id="MaitreFamilleNon"
+                value="false"
+                checked>
+
+            Non
+        </label>
+
+
+    </div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- ==================================
+              COORDONNEES
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+<i class="fa-solid fa-phone"></i>
+Coordonnées
+</h2>
+
+
+
+
+<div class="form-grid">
+
+
+
+
+
+<div class="field">
+
+<label>Pays</label>
+
+<input type="text" id="pays">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+    <label>Email</label>
+
+    <input 
+        type="email" 
+        id="mail">
+
+    <small id="mailError"></small>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+    <label>Téléphone 1</label>
+
+    <input 
+        type="text" 
+        id="numTelephone1"
+        maxlength="8">
+
+    <small id="telephone1Error"></small>
+
+</div>
+
+
+
+
+
+<div class="field">
+    <label>Téléphone 2</label>
+    <input type="text" id="numTelephone2" maxlength="8">
+    <small id="telephone2Error"></small>
+    <small id="telephoneDupliqueError"></small>
+</div>
+
+
+
+<div class="field">
+
+    <label>Téléphone fixe</label>
+
+    <input 
+        type="text" 
+        id="numfixe"
+        maxlength="8">
+
+    <small id="fixeError"></small>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Nationalité</label>
+
+<input type="text" id="nationalite">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Adresse</label>
+
+<input type="text" id="adresse">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Gouvernorat</label>
+
+<input type="text" id="gouvernorat">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Code postal</label>
+
+<input type="number" id="codePostal">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Répartition géographique</label>
+
+<input type="text" id="repartitionGeo">
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+<!-- ==================================
+              IDENTITE
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+<i class="fa-solid fa-id-card"></i>
+Pièce d'identité
+</h2>
+
+
+
+<div class="form-grid">
+
+
+
+<div class="field">
+
+<label>Type identité</label>
+
+<select id="identite">
+
+<option value="">-- Choisir --</option>
+
+<option value="CIN">CIN</option>
+
+<option value="PASSPORT">Passport</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Date identité</label>
+
+<input type="date" id="dateidentite">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+    <label>Numéro identité</label>
+
+    <input 
+        type="text" 
+        id="numidentite"
+        maxlength="8">
+
+    <small id="identiteError"></small>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Délivrance</label>
+
+<input type="text" id="delivrance">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==================================
+             ASSURANCES
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+
+<i class="fa-solid fa-heart-pulse"></i>
+
+Assurances
+
+</h2>
+
+
+
+<div class="checkbox-grid">
+
+
+
+<label>
+
+<input type="checkbox" id="assuranceGroup">
+
+Assurance groupe
+
+</label>
+
+
+
+
+
+<label>
+
+<input type="checkbox" id="assuranceMaladie">
+
+Assurance maladie
+
+</label>
+
+
+
+
+
+<label>
+
+<input type="checkbox" id="affiliationMutuelle">
+
+Affiliation mutuelle
+
+</label>
+
+
+
+
+
+<label>
+
+<input type="checkbox" id="assuranceConjoint">
+
+Assurance conjoint
+
+</label>
+
+
+
+
+
+<label>
+
+<input type="checkbox" id="prevoyanceSociale">
+
+Prévoyance sociale
+
+</label>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- ==================================
+        SITUATION PROFESSIONNELLE
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+
+<i class="fa-solid fa-briefcase"></i>
+
+Situation professionnelle
+
+</h2>
+
+
+
+
+<div class="form-grid">
+
+<div class="field">
+
+    <label>Lieu de travail</label>
+
+    <input type="text" id="lieutravail">
+
+</div>
+
+<div class="field">
+
+    <label>Date embauche</label>
+
+    <input 
+        type="date" 
+        id="dateEmbauche">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+    <label>Date entrée</label>
+
+    <input 
+        type="date" 
+        id="dateEntree">
+
+    <small id="dateEmbaucheError"></small>
+
+</div>
+
+
+    <div class="field">
+        <label>Corps</label>
+        <select id="corps">
+            <option value="">-- Sélectionner un corps --</option>
+        </select>
+        <small id="corpsError"></small>
+    </div>
+
+    <div class="field">
+        <label>Catégorie</label>
+        <select id="categorie" disabled>
+            <option value="">-- Sélectionner d'abord un corps --</option>
+        </select>
+        <small id="categorieError"></small>
+    </div>
+    <div class="field">
+        <label>Grade</label>
+        <input type="text" id="grade" readonly>
+    </div>
+
+    <div class="field">
+        <label>Date catégorie</label>
+        <input type="date" id="dateCategorie">
+        <small id="dateCategorieError"></small>
+    </div>
+
+    <div class="field">
+        <label>Date grade</label>
+        <input type="date" id="dateGrade">
+        <small id="dateGradeError"></small>
+    </div>
+
+
+
+    <div class="field">
+
+        <label>Echelle</label>
+
+        <select id="echelle">
+
+            <option value="">-- Sélectionner une échelle --</option>
+
+            <option value="1">1</option>
+
+            <option value="2">2</option>
+
+        </select>
+
+    </div>
+
+    <div class="field">
+        <label>Date échelle</label>
+        <input type="date" id="dateechelle">
+        <small id="dateEchelleError"></small>
+    </div>
+
+
+
+
+
+
+
+<div class="field">
+
+<label>Rang</label>
+
+<input type="number" id="rang">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+    <label>Date rang</label>
+
+    <input type="date" id="daterang">
+
+    <small id="dateRangError"></small>
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Poste</label>
+
+<input type="text" id="poste">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="field">
+
+<label>Service militaire</label>
+
+
+<select id="serviceMilitaire">
+
+
+<option value="">-- Choisir --</option>
+
+<option value="ACCOMPLI">
+
+Accompli
+
+</option>
+
+
+<option value="REPORTE">
+
+Reporté
+
+</option>
+
+
+<option value="DISPENSE">
+
+Dispensé
+
+</option>
+
+
+<option value="NON_CONCERNE">
+
+Non concerné
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+<div class="field">
+
+<label>Caisse</label>
+
+
+<select id="caisse">
+
+
+<option value="">-- Choisir --</option>
+
+<option value="CNSS">
+
+CNSS
+
+</option>
+
+
+<option value="CNRPS">
+
+CNRPS
+
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="field">
+
+<label>Permis</label>
+
+
+<select id="permis">
+
+
+<option value="">-- Choisir --</option>
+
+
+<option value="PERMIS_A">
+
+Permis A
+
+</option>
+
+
+<option value="PERMIS_B">
+
+Permis B
+
+</option>
+
+
+<option value="PERMIS_C">
+
+Permis C
+
+</option>
+
+
+<option value="PERMIS_D">
+
+Permis D
+
+</option>
+
+
+<option value="PERMIS_D1">
+
+Permis D1
+
+</option>
+
+
+<option value="PERMIS_A1">
+
+Permis A1
+
+</option>
+
+
+<option value="PERMIS_BE">
+
+Permis BE
+
+</option>
+
+
+<option value="PERMIS_CE">
+
+Permis CE
+
+</option>
+
+
+<option value="PERMIS_DE">
+
+Permis DE
+
+</option>
+
+
+<option value="PERMIS_H">
+
+Permis H
+
+</option>
+
+
+</select>
+
+
+</div>
+
+    <div class="field">
+
+        <label>Statut</label>
+
+        <select id="statut">
+
+            <option value="">--Choisir un statut--</option>
+
+            <option value="ACTIF">Actif</option>
+
+            <option value="RETRAITE">Retraité</option>
+
+            <option value="ACCIDENT_DE_TRAVAIL">Accident de travail</option>
+
+            <option value="EXCLU">Exclu</option>
+
+            <option value="MISE_EN_DISPONIBILITE">Mise en disponibilité</option>
+
+            <option value="DETACHE">Détaché</option>
+
+        </select>
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- ==================================
+        INFORMATIONS FINANCIERES
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+
+<i class="fa-solid fa-building-columns"></i>
+
+Informations financières
+
+</h2>
+
+
+
+<div class="form-grid">
+
+
+
+<div class="field">
+
+<label>Numéro compte</label>
+
+<input type="number" id="numcompte">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Compte courant</label>
+
+<input type="number" id="comptecourant">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Numéro affiliation</label>
+
+<input type="number" id="numaffiliation">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Numéro affiliation complémentaire</label>
+
+<input type="number" id="numaffcomp">
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>Numéro affiliation convention</label>
+
+<input type="number" id="numaffconv">
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==================================
+              HANDICAP
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+
+<i class="fa-solid fa-wheelchair"></i>
+
+Handicap
+
+</h2>
+
+
+
+
+<div class="checkbox-grid">
+
+
+
+<label>
+
+<input type="checkbox" id="handicape">
+
+
+Handicapé
+
+
+</label>
+
+
+
+</div>
+
+
+
+
+<div class="form-grid">
+
+
+<div class="field"
+     id="natureHandicapField"
+     style="display:none;">
+
+
+<label>
+
+Nature handicap
+
+</label>
+
+
+<input type="text" id="naturehandicape">
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==================================
+              RETRAITE
+================================== -->
+
+
+<div class="section">
+
+
+<h2>
+
+<i class="fa-solid fa-person-walking-arrow-right"></i>
+
+Retraite
+
+</h2>
+
+
+
+
+<div class="form-grid">
+
+
+
+<div class="field">
+
+<label>
+
+Nombre années prolongement
+
+</label>
+
+
+<input type="number" id="numAnneProlongement">
+
+
+</div>
+
+
+
+
+
+<div class="field">
+
+<label>
+
+Date retraite
+
+</label>
+
+
+<input type="date" id="dateRetraite">
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ==================================
+              BOUTON
+================================== -->
+
+
+<button type="submit" id="submitBtn">
+
+    <i class="fa-solid fa-user-plus" id="submitIcon"></i>
+
+    <span id="submitText">Ajouter Personnel</span>
+
+</button>
+
+
+
+</form>
+
+
+
+
+
+<div id="message"></div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<script src="../js/form.js"></script>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,893 @@
+/* ==================================
+        GLOBAL
+================================== */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",sans-serif;
+
+}
+
+
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0F4C81,#3A7BD5);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+
+
+
+
+
+/* ==================================
+        BACKGROUND
+================================== */
+
+
+.background{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+
+
+
+
+/* ==================================
+        CARD
+================================== */
+
+
+.personnel-card{
+
+
+    width:1150px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:35px 45px;
+
+
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+
+
+    animation:fadeIn .5s ease;
+
+
+}
+
+
+
+
+@keyframes fadeIn{
+
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+             LOGO
+================================== */
+
+
+.logo{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.logo img{
+
+
+    width:100px;
+
+    height:100px;
+
+    object-fit:contain;
+
+
+}
+
+
+
+
+
+
+
+/* ==================================
+            TITRES
+================================== */
+
+
+h1{
+
+
+    text-align:center;
+
+    color:#0F4C81;
+
+    margin-bottom:5px;
+
+
+}
+
+
+
+
+p{
+
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:30px;
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+
+
+/* ==================================
+            SECTIONS
+================================== */
+
+
+.section{
+
+
+    background:#f8fbff;
+
+
+    border:1px solid #dce8f5;
+
+
+    border-radius:15px;
+
+
+    padding:22px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.section h2{
+
+
+    color:#0F4C81;
+
+
+    font-size:18px;
+
+
+    margin-bottom:20px;
+
+
+    padding-bottom:10px;
+
+
+    border-bottom:2px solid #1565C0;
+
+
+}
+
+
+
+
+.section h2 i{
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==================================
+            FORM GRID
+================================== */
+
+
+.form-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:18px;
+
+
+}
+
+
+
+
+.field{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+
+
+.field label{
+
+
+    font-size:14px;
+
+
+    font-weight:600;
+
+
+    color:#444;
+
+
+    margin-bottom:6px;
+
+
+}
+
+
+
+
+
+
+
+/* ==================================
+        INPUTS + SELECT
+================================== */
+
+
+input,
+select{
+
+
+    width:100%;
+
+
+    padding:12px;
+
+
+    border-radius:10px;
+
+
+    border:1px solid #d9d9d9;
+
+
+    outline:none;
+
+
+    background:white;
+
+
+    font-size:14px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+input:focus,
+select:focus{
+
+
+    border-color:#1565C0;
+
+
+    box-shadow:0 0 8px rgba(21,101,192,.25);
+
+
+}
+
+
+
+
+select{
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* ==================================
+        CHECKBOX
+================================== */
+
+
+.checkbox-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:repeat(3,1fr);
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+.checkbox-grid label{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    padding:12px;
+
+
+    background:white;
+
+
+    border:1px solid #ddd;
+
+
+    border-radius:10px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.checkbox-grid label:hover{
+
+
+    border-color:#1565C0;
+
+
+    background:#f2f7ff;
+
+
+}
+
+
+
+
+.checkbox-grid input{
+
+
+    width:18px;
+
+
+    height:18px;
+
+
+    cursor:pointer;
+
+
+    accent-color:#0F4C81;
+
+
+}
+
+
+
+
+
+
+
+
+/* ==================================
+        CHECKBOX SEUL
+================================== */
+
+
+.checkbox-field{
+
+
+    justify-content:center;
+
+
+}
+
+
+
+.checkbox-field label{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+/* ===============================
+      Radio 
+================================ */
+
+
+.radio-line{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:12px;
+     
+    margin-top: 22px;
+
+}
+
+
+
+.radio-line .main-label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#444;
+
+    margin-right:20px;
+
+}
+
+
+
+.radio-line label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    cursor:pointer;
+
+}
+
+
+
+.radio-line input[type="radio"]{
+
+    width:18px;
+
+    height:18px;
+
+    cursor:pointer;
+
+    accent-color:#0F4C81;
+
+}
+
+
+
+/* ==================================
+             BUTTON
+================================== */
+
+
+button{
+
+
+    width:100%;
+
+
+    padding:15px;
+
+
+    margin-top:15px;
+
+
+    border:none;
+
+
+    border-radius:12px;
+
+
+    background:#0F4C81;
+
+
+    color:white;
+
+
+    font-size:17px;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+button:hover{
+
+
+    background:#1565C0;
+
+
+    transform:translateY(-2px);
+
+
+}
+
+
+
+button i{
+
+
+    margin-right:8px;
+
+
+}
+
+
+
+
+
+
+
+/* ==================================
+            MESSAGE
+================================== */
+
+
+#message{
+
+
+    margin-top:20px;
+
+
+    text-align:center;
+
+
+    font-weight:bold;
+
+
+    font-size:15px;
+
+
+    min-height:25px;
+
+
+}
+
+
+
+small{
+
+    display:block;
+
+    margin-top:5px;
+
+    font-size:12px;
+
+    color:#e53935;
+
+}
+
+
+
+
+/* ==================================
+            DATE INPUT
+================================== */
+
+
+input[type="date"]{
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+/*==========================
+        PHOTO
+===========================*/
+
+.drop-zone{
+
+    width:230px;
+
+    height:230px;
+
+    margin:25px auto;
+
+    border:3px dashed #1565C0;
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transition:.3s;
+
+    overflow:hidden;
+
+    background:#fafcff;
+
+}
+
+.drop-zone:hover{
+
+    background:#eef5ff;
+
+}
+
+.drop-zone.dragover{
+
+    background:#dbeeff;
+
+    border-color:#0F4C81;
+
+}
+
+.drop-zone img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:none;
+
+}
+
+.drop-text{
+
+    text-align:center;
+
+    color:#1565C0;
+
+    padding:15px;
+
+}
+
+.drop-text i{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+.drop-text p{
+
+    font-weight:bold;
+
+}
+
+.drop-text span{
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+
+
+/* ==================================
+          RESPONSIVE
+================================== */
+
+
+@media(max-width:1100px){
+
+
+
+    .personnel-card{
+
+
+        width:95%;
+
+
+    }
+
+
+
+
+
+    .form-grid{
+
+
+        grid-template-columns:repeat(2,1fr);
+
+
+    }
+
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+
+    body{
+
+
+        padding:15px;
+
+
+    }
+
+
+
+
+
+    .personnel-card{
+
+
+        padding:25px;
+
+
+    }
+
+
+
+
+
+    .form-grid{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+
+    .checkbox-grid{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+}
